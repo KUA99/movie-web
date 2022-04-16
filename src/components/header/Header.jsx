@@ -35,11 +35,6 @@ const headerNavList = [
     path: "/tv",
     icon: <LiveTv className="nav-icon" />,
   },
-  {
-    title: "Playlist",
-    path: "/playlist",
-    icon: <PlaylistAddCheck className="nav-icon" />,
-  },
 ];
 
 const Header = () => {
