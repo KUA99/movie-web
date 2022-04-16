@@ -73,16 +73,6 @@ const Detail = () => {
                     : movie.episode_run_time}
                 </p>
               </div>
-              <div className="detail-content-info-play">
-                <a href="#">
-                  <PlayArrow className="detail-content-info-play-btn" />
-                  <span>play</span>
-                </a>
-                <a href="#">
-                  <Add className="detail-content-info-play-btn" />
-                  <span>play list</span>
-                </a>
-              </div>
             </div>
           </div>
           <div className="detail-cast container">
