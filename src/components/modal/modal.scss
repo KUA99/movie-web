@@ -1,0 +1,47 @@
+@use "../..//scss/" as *;
+
+.modal {
+  @include flex(center, center);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background-color: rgba($color: $background-color, $alpha: 0.4);
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal-content {
+  padding: 20px;
+  background-color: $background-color;
+  width: 50%;
+  opacity: 0;
+  transform: translateY(-250px);
+  position: relative;
+  transition: all 0.2s linear;
+
+  &-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.modal.active .modal-content {
+  opacity: 1;
+  transform: translateY(0);
+}
